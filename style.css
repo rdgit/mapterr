@@ -1,3 +1,23 @@
-h1 {
-  background-color: lightblue;
+body {
+  background-color: color-mix(in srgb, Canvas, CanvasText 2.5%);
+  color: color-mix(in srgb, CanvasText, Canvas 15%);
+  color-scheme: dark;
+  font-family: Helvetica, sans-serif;
+}
+
+ul.v, ul.ch
+{
+    list-style-type: none;
+}
+
+ul.v {
+  padding-left: 0em;
+}
+
+ul.ch {
+  padding-left: 1em;
+}
+
+h7 {
+  background-color: lightgrey;
 }
