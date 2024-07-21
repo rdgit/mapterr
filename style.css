@@ -4,7 +4,14 @@ body {
   color-scheme: dark;
   font-family: Helvetica, sans-serif;
 }
-
+h4.t {
+  margin-bottom: .01em;
+}
+h5.n {
+  margin-bottom: .01em;
+  margin-top:.01em;
+  font-style: italic;
+}
 ul.v, ul.ch
 {
     list-style-type: none;
@@ -16,8 +23,4 @@ ul.v {
 
 ul.ch {
   padding-left: 1em;
-}
-
-h7 {
-  background-color: lightgrey;
 }
