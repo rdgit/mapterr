@@ -12,6 +12,9 @@ h5.n {
   margin-top:.01em;
   font-style: italic;
 }
+ul.indexlist a {
+	margin-right: 1em;
+}
 ul.v, ul.ch
 {
     list-style-type: none;
