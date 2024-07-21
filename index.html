@@ -16,8 +16,10 @@
   <h1>mapterr</h1>
   <!-- Add your site or application content here -->
   <p>aloha! This is HTML5 Boilerplate.</p>
+  
+  <p>Play this: <a id="playthis" href="#">this is a link</a> <button id="reroll">re-roll</button></p>
 
-  <ul class="indexlist">
+  <ul id="indexlist" class="indexlist">
     <li><a href="title1.html" id="title1">Index 1</a>-dexy 1</li>
     <li><a href="title2.html" id="title2">Index 2</a>-dexy 2</li>
     <li><a href="cathys_clown.html" id="cathys_clown">Cathy's Clown</a>You Am I</li>
@@ -33,6 +35,41 @@
 	 <li><a href="she_set_fire.html" id="she_set_fire">She set fire to the house</a>Stephen Cummings</li>
 	<li><a href="dayascension.html" id="dayascension">Day Of My Ascension</a>Dave McComb</li>
   </ul>
+  <script>
+	
+		
+		
+	var mapterr = (function () {
+	  return {
+		
+		spinhit: -1,
+		totalcount: -1,
+		getRandomInt: function(min, max) {
+		  const minCeiled = Math.ceil(min);
+		  const maxFloored = Math.floor(max);
+		  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+		},
+		getNewPlayThis: function(){
+			
+			mapterr.spinhit = mapterr.getRandomInt(0,mapterr.totalcount);
+			
+			var newplaythisli = document.getElementById("indexlist").getElementsByTagName("li")[mapterr.spinhit];
+			
+			var link = document.getElementById("playthis");
+			link.innerHTML = newplaythisli.children[0].innerHTML;
+			link.setAttribute('href', newplaythisli.children[0].href);
+		}
+		}
+	}());
+	document.addEventListener("DOMContentLoaded", function() {
+	  mapterr.totalcount = document.getElementById("indexlist").getElementsByTagName("li").length;
+	  mapterr.getNewPlayThis();
+	});
+	document.getElementById("reroll").addEventListener("click", function (e) {
+		 mapterr.getNewPlayThis();
+	});
+	
+  </script>
   <script src="app.js"></script>
 
 </body>
