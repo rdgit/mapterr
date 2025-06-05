@@ -23,6 +23,11 @@ ul.v, ul.ch
 {
     list-style-type: none;
 }
+li.tab {
+  color:aqua;
+  font-family: monospace;
+  white-space: pre; /* Preserves spaces and tabs */
+}
 
 ul.v {
   padding-left: 0em;
